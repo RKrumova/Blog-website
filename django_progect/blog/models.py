@@ -13,4 +13,9 @@ class Post(models.Model):
 
 	def get_absolute_url(self):
 		return reverse('post-detail', kwargs={'pk':self.pk})
-
+#comments
+class Comment(models.Model):
+	content = models.TextField(max_length= 360)
+	author = models.ForeignKey(User, on_delete = models.CASCADE)
+	date_created = models.DateTimeField(auto_now=True)
+	
