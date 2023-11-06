@@ -1,0 +1,9 @@
+{% extends 'post_detail.html' %}
+{% load static %}  
+{% include 'crispy_forms/field.html' %}
+{% load crispy_forms_tags %}
+{% block head_title %}{{ post.title }}{% endblock %}
+{% block content %}
+{% include 'post_detail.html' %}
+
+{% endblock content %}
